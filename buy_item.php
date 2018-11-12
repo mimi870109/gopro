@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>GoPor影片集合地</title>
+    <title>GoPore購買影片</title>
     <link rel="stylesheet" href="css/home_page.css">
 </head>
 <body >
@@ -17,7 +17,7 @@
         </ul>
     </li>
 
-    <li><a href="buy.php">購買作品</a>
+    <li><a href="buy_item.php">購買作品</a>
         <ul>
             <li><a href="">經典作品</a></li>
             <li><a href="">購買素材</a></li>
