@@ -12,11 +12,11 @@
 <body>
 <form id="Upload_Form" method="post" enctype="multipart/form-data" action="function/upload.php" style="padding: 10px;">
     <input type="file" name="my_file[]" multiple>
-    <input type="submit" value="Upload">
     <div>介紹：</div>
     <input type="text" name="Introduce" style="width: 40%;height: 200px;">
     <div>欲售價格：</div>
-    <input type="number" name="Sell_Price">
+    <input type="number" name="Sell_Price"> </br>
+    <input type="submit" value="Upload" style="margin-left: 37%;">
 </form>
 </body>
 </html>
