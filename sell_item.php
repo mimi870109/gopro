@@ -8,11 +8,9 @@
 
 ?>
 <body>
-<form>
-    <form action="upload.php" method="post" enctype="multipart/form-data">
-        檔案名稱:<input type="file" name="file" id="file" /><br />
-        <input type="submit" name="submit" value="上傳檔案" />
-    </form>
+<form method="post" enctype="multipart/form-data" action="function/upload.php">
+    <input type="file" name="my_file[]" multiple>
+    <input type="submit" value="Upload">
 </form>
 </body>
 </html>
