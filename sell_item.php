@@ -3,14 +3,20 @@
 <head>
     <meta charset="utf-8">
     <title>販賣影片</title>
+    <style>
+        #Upload_Form > *{
+            margin-top: 10px;
+        }
+    </style>
 </head>
-<?php
-
-?>
 <body>
-<form method="post" enctype="multipart/form-data" action="function/upload.php">
+<form id="Upload_Form" method="post" enctype="multipart/form-data" action="function/upload.php" style="padding: 10px;">
     <input type="file" name="my_file[]" multiple>
     <input type="submit" value="Upload">
+    <div>介紹：</div>
+    <input type="text" name="Introduce" style="width: 40%;height: 200px;">
+    <div>欲售價格：</div>
+    <input type="number" name="Sell_Price">
 </form>
 </body>
 </html>
