@@ -7,7 +7,7 @@ for ($i = 0; $i < $fileCount; $i++) {
     {
         echo '檔案名稱: ' . $_FILES['my_file']['name'][$i] . '<br/>';
         echo '檔案類型: ' . $_FILES['my_file']['type'][$i] . '<br/>';
-        echo '檔案大小: ' . sprintf("%.2f",($_FILES['my_file']['size'][$i] / (1024*1024))). ' MB<br/>';
+        echo '檔案大小: ' . sprintf("%.2f",($_FILES['my_file']['size'][$i] / (1024*1024)) ). ' MB<br/>';
             if (file_exists('../upload/' . $_FILES['my_file']['name'][$i]))  # 檢查檔案是否已經存在
             {
                 echo '檔案已存在。<br/>';

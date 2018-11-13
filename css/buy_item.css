@@ -11,6 +11,12 @@
     height: 100%;
     width: 33%;
 }
+.text_buy{
+    width:40%;
+    height: 100%;
+    margin-left:40%;
+    border-color: aquamarine;
+}
 .button{
 	width: 33%;
 	height: 100%;
