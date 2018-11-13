@@ -42,7 +42,8 @@
 <hr>
 <div class="content">
     <div class="video_buy"> <video src="video/111.MP4" loop autoplay="autoplay" muted controls="controls"  height="100%"></video></div>
-    <div class="button"> <button value="購買">購買</button></div>
+    <div class="text_buy"><h3>關於</h3></div>
+    <div class="button"> <button >購買</button></div>
 </div>
 <hr>
 <div class="content">
