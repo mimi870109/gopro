@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="css/home_page.css">
     <link rel="stylesheet" href="css/buy_item.css">
 </head>
-<body >
+<body>
 <h1 align="center" class="qqq">Gopro影片集中地 </h1>
 
-<ul class="drop-down-menu">
+<ul class="drop-down-menu" >
     <li><a href="game.html">關於我們</a>
         <ul>
             <li><a href="">創作動機</a></li>
@@ -41,13 +41,21 @@
 </ul>
 <hr>
 <div class="content">
-    <div class="video_buy"> <video src="video/111.MP4" loop autoplay="autoplay" muted controls="controls"  height="100%"></video></div>
-    <div class="text_buy"><div class="text_buy_1"><p>名稱:海浪之星</p><p>地點:假日之森</p><p>作者:mimi870109</p><p>關於:衝浪的我怎麼那麼帥</p></div> </div>
-    <div class="button"></div>
+    <div class="video_buy"> 
+		<video src="video/111.MP4" loop autoplay="autoplay" muted controls="controls"  height="100%"></video>
+	</div>
+    <div class="text_buy">
+		<p>名稱:海浪之星</p>
+		<p>地點:假日之森</p>
+		<p>作者:mimi870109</p>
+		<p>關於:衝浪的我怎麼那麼帥</p>
+	</div>
+    <div class="test"><a href=""></a></div>
 </div>
 <hr>
 <div class="content">
     <div class="video_buy"> <video src="video/116.MP4" loop autoplay="autoplay" muted controls="controls"  height="100%">111</video></div>
 </div>
-<?php
-?>
+
+
+</body>
