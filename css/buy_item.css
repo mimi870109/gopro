@@ -27,7 +27,7 @@
     margin: 150px 40px 10px 40px;
 	width: 150px;
 	height: 50px;
-    background-image: url("/image/image_buy.jpg");
+    background-image: url("../image/image_buy.jpg");
     border-radius: 50px;
 }
 .test:active{
