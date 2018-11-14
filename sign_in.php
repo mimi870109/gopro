@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>GoPore購買影片</title>
+    <title>GoPor影片集合地</title>
     <link rel="stylesheet" href="css/home_page.css">
-    <link rel="stylesheet" href="css/buy_item.css">
 </head>
-<body>
+<body >
 <h1 align="center" class="qqq">Gopro影片集中地 </h1>
 
-<ul class="drop-down-menu" >
+<ul class="drop-down-menu">
     <li><a href="game.html">關於我們</a>
         <ul>
             <li><a href="">創作動機</a></li>
@@ -18,7 +17,7 @@
         </ul>
     </li>
 
-    <li><a href="buy_item.php">購買作品</a>
+    <li><a href="">購買作品</a>
         <ul>
             <li><a href="">經典作品</a></li>
             <li><a href="">購買素材</a></li>
@@ -36,26 +35,28 @@
             <li><a href="">年費申請</a></li>
         </ul>
     </li>
-    <li><a href="">我要貢獻影片</a></li>
-    <li><a href="./Login_v15/index.html">登入</a></li>
+    <li><a href="sell_item.php">我要貢獻影片</a></li>
+    <li><a href="">登入</a></li>
 </ul>
-<hr>
-<div class="content">
-    <div class="video_buy"> 
-		<video src="video/111.MP4" loop autoplay="autoplay" muted controls="controls"  height="100%"></video>
-	</div>
-    <div class="text_buy">
-		<p>名稱:海浪之星</p>
-		<p>地點:假日之森</p>
-		<p>作者:mimi870109</p>
-		<p>關於:衝浪的我怎麼那麼帥</p>
-	</div>
-    <div class="test"><a href="">立即購買</a></div>
+
+<div class="eg-CSS3-transitions">
+    滑鼠滑上來看看<br>
+    使用CSS3 transitions漸變效果
 </div>
-<hr>
-<div class="content">
-    <div class="video_buy"> <video src="video/116.MP4" loop autoplay="autoplay" muted controls="controls"  height="100%">111</video></div>
+<div class="eg-normal">
+    滑鼠滑上來看看<br>
+    沒有CSS3 transitions漸變效果
 </div>
+
 
 
 </body>
+</html>
+<?php
+?>
+/**
+ * Created by PhpStorm.
+ * User: 浩哲
+ * Date: 2018/11/14
+ * Time: 下午 10:56
+ */

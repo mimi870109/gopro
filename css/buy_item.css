@@ -27,7 +27,9 @@
     margin: 150px 40px 10px 40px;
 	width: 150px;
 	height: 50px;
-    background-image: url("../image/image_buy.jpg");
+    background-color: rgba(58, 58, 255, 0.16);
+    font-size: 24px;
+    text-align: center;
 	background-size: cover;
     border-radius: 50px;
 }
