@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="css/buy_item.css">
 </head>
 <body>
-<h1 align="center" class="qqq">Gopro影片集中地 </h1>
+<div class="header"><h1 align="center" class="qqq">Gopro影片集中地 </h1></div>
+
 
 <ul class="drop-down-menu" >
     <li><a href="game.html">關於我們</a>
