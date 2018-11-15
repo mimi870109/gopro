@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>GoPore創作動機</title>
-    <link rel="stylesheet" href="/css/home_page.css">
-    <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="css/home_page.css">
+    <link rel="stylesheet" href="css/about.css">
 </head>
 <body >
-<div class="header"><h1 align="center" class="qqq">Gopro影片集中地 </h1></div>
-
-
+<div class="header">
+    <h1 >Gopro影片集中地 </h1>
+</div>
+<nav class="Nav_Bar">
 <ul class="drop-down-menu">
     <li><a href="game.html">關於我們</a>
         <ul>
@@ -40,6 +41,7 @@
     <li><a href="sell_item.php">我要貢獻影片</a></li>
     <li><a href="login/index.html">登入</a></li>
 </ul>
+</nav>
 <hr>
 <center>
     <h1>聯絡方式</h1>
