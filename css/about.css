@@ -1,0 +1,28 @@
+center{
+    width: 80%;
+    height: 650px;
+    background-color: #f6f8fa;
+    margin: 10px auto auto 120px;
+    border-radius: 30px;
+    font-family:  "Microsoft JhengHeia";
+    font-size: 20px;
+}
+.photo1{
+    width: 800px;
+    height: 400px;
+    background-size: cover;
+    background-image: url("../image/home_creation.jpg");/*照片由雅各佈歐文斯在Unsplash上拍攝*/
+}
+.photo2{
+    width: 637px;
+    height: 403px;
+    background-size: cover;
+    background-image: url("../image/gopro.jpg");
+
+}
+.photo3{
+    background-image: url("../image/IMG_9791.JPG");
+    background-size: cover;
+    width: 540px;
+    height: 480px;
+}

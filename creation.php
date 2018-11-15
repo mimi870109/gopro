@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>GoPore創作動機</title>
     <link rel="stylesheet" href="css/home_page.css">
-    <link rel="stylesheet" href="css/home_creation.css">
+    <link rel="stylesheet" href="css/about.css">
 </head>
 <body >
 <div class="header">
@@ -14,9 +14,9 @@
 	<ul class="drop-down-menu" >
 		<li><a href="game.html">關於我們</a>
 			<ul>
-				<li><a href="">創作動機</a></li>
-				<li><a href="">拍攝器材</a></li>
-				<li><a href="">聯絡方式</a></li>
+				<li><a href="creation.php">創作動機</a></li>
+				<li><a href="equipment.php">拍攝器材</a></li>
+				<li><a href="connection%20.php">聯絡方式</a></li>
 			</ul>
 		</li>
 		<li><a href="buy_item.php">購買作品</a>
@@ -45,7 +45,7 @@
     <h1>創作動機</h1>
     <p>靈感是一種心理現象，是攝影創作中表現出來的突發性靈動，它經常出現在創作活動前兆、創作進行中及後期製作中。通過表達慾望和心理意念，去追求視覺感受、情感表露、意境提昇，它是藝術創作重要元素。攝影者平時苦心孤詣，百思不得其解，諸如題材尋覓、畫面營造、氛圍掌控、意涵表達等問題，在外界景物誘導下見景生情而豁然感悟激發靈感，猶如汽油遇到火種頓時爆發，創作意念驀然而起，意即靈感。</p>
     <p>在進行後期製作時，常常會發現自記影片素材有缺少，此網站讓你能夠讓你創作出更好的影片素材。</p>
-    <div class="photo"></div>
+    <div class="photo1"></div>
 </center>
 <hr>
 <div class="eg-CSS3-transitions">
