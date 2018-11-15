@@ -6,10 +6,13 @@ body{ background: #808c92}
     background-image: url(" ../image/home_top.jpg");/*攝影：Elijah Hiett，關於Unsplash*/
     background-size: cover;
     border-radius: 20px;
+	text-align: center;
 }
-.qqq{color: #fdfbff;
+.header > h1{
+	color: #fdfbff;
     font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
     font-size: 60px;
+	line-height: 200px;
     margin: 0px auto;
 }
 
@@ -43,17 +46,24 @@ div.eg-CSS3-transitions {
 }
 
 dia.ccc:hover{
-            background-color: red;
-            }
+   background-color: red;
+}
+
+.Nav_Bar{
+	position: relative;
+	margin: -36px auto -10px auto;
+}
 ul.drop-down-menu {
-    border: #808c92 1px solid;
-    display: inline-block;
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 13px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+	display: table;
+	padding: 0;
+	margin: 0 auto 0px auto;
+	border: #808c92 1px solid;
+	list-style: none;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 13px;
 }
 ul.drop-down-menu li {
+	list-style:none;
     position: relative;
     white-space: nowrap;
     border-right: #ccc 1px solid;
@@ -81,9 +91,9 @@ ul.drop-down-menu li:hover > a { /* 滑鼠移入次選單上層按鈕保持變�
 
 ul.drop-down-menu ul {
     border: #5a6268 1px solid;
+	padding: 0;
     position: absolute;
     z-index: 99;
-    left: -1px;
     top: 100%;
     min-width: 180px;
 }
