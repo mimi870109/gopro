@@ -22,24 +22,24 @@
 
     <li><a href="buy_item.php">購買作品</a>
         <ul>
-            <li><a href="">經典作品</a></li>
-            <li><a href="">購買素材</a></li>
+            <li><a href="#">經典作品</a></li>
+            <li><a href="#">購買素材</a></li>
         </ul>
     </li>
 
-    <li><a href="">教學專案</a>
+    <li><a href="#">教學專案</a>
         <ul>
-            <li><a href="">費用計算</a></li>
-            <li><a href="">準備器材</a></li>
+            <li><a href="#">費用計算</a></li>
+            <li><a href="#">準備器材</a></li>
         </ul>
-    <li><a href="">購買方案</a>
+    <li><a href="#">購買方案</a>
         <ul>
-            <li><a href="">費率計算</a></li>
-            <li><a href="">年費申請</a></li>
+            <li><a href="#">費率計算</a></li>
+            <li><a href="#">年費申請</a></li>
         </ul>
     </li>
     <li><a href="sell_item.php">我要貢獻影片</a></li>
-    <li><a href="login/index.html">登入</a></li>
+    <li><a href="login/login.php">登入</a></li>
 </ul>
 </nav>
 <hr>
