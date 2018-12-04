@@ -11,7 +11,7 @@ if(!$link){
     exit;
 }
 
-$link->set_charset("utf-8");
+$link->set_charset("utf8");
 /**
  * Created by PhpStorm.
  * User: 浩哲

@@ -60,7 +60,7 @@
                         </label>
                     </div>
                     <div>
-                        <a href="#" class="txt1">
+                        <a href="new_user.php" class="txt1">
                             申請帳號
                         </a>
                     </div>
