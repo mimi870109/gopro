@@ -63,6 +63,12 @@
 
 </body>
 <?php
+echo "現在日期:";
+echo date("Y-m-d");
+date_default_timezone_set("asia/shanghai");
+echo "現在時間:";
+echo date("H:i:sa");
+
 ?>
 /**
  * Created by PhpStorm.
