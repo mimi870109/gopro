@@ -64,11 +64,6 @@
                             申請帳號
                         </a>
                     </div>
-                    <div>
-                        <a href="#" class="txt1">
-                            忘記密碼?
-                        </a>
-                    </div>
 
                 </div>
 

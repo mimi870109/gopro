@@ -70,29 +70,11 @@
                     </select><br>
                 </div>
 
-                <div class="flex-sb-m w-full p-b-30">
-                    <div class="contact100-form-checkbox">
-                        <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-                        <label class="label-checkbox100" for="ckb1">
-                            記住帳號
-                        </label>
-                    </div>
-                    <div>
-                        <a href="#" class="txt1">
-                            申請帳號
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#" class="txt1">
-                            忘記密碼?
-                        </a>
-                    </div>
 
-                </div>
 
                 <div class="container-login100-form-btn">
                     <button class="login100-form-btn">
-                        登入<input type="submit" value="">
+                        註冊<input type="submit" value="">
                     </button>
                 </div>
             </form>
