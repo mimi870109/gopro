@@ -1,35 +1,20 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/html">
 <head>
+    <script>
+        window.alert()
+    </script>
+    <?php
+    include ('./login/Mysql_check.php');
+    ?>
     <meta charset="utf-8">
     <title>販賣影片</title>
-    <?php
-    include ('./login/session.php');
-    $Username = $_SESSION['username'];
-    ?>
     <style>
         #Upload_Form > *{
             margin-top: 10px;
         }
     </style>
     <link rel="stylesheet" href="css/home_page.css">
-    <script>
-        function check()
-        {
-            if(Up_Form.Tile.value == "")
-            {
-                alert("未輸入標題");
-            }
-            else if (Up_Form.Introduce == ""){
-                alert("未輸入介紹");
-            }
-            else if (Up_Form.Sell_Price == ""){
-                alert("未輸入價格");
-            }
-            <!-- 若以上條件皆不符合，也就是表單資料皆有填寫的話，則將資料送出 -->
-            else Up_Form.submit();
-        }
-    </script>
 </head>
 <body>
 <div class="header">
@@ -66,16 +51,26 @@
         <li><a href="./login/login.php">登入</a></li>
     </ul>
 </nav>
-<form name="Up_Form" id="Upload_Form" method="post" enctype="multipart/form-data" action="function/upload.php" style="padding: 10px;">
-    <?php if($Username == null){ echo '<div style="color: red;">請先進行登陸</div>';} ?>
-    <input type="file" name="my_file[]" multiple>
-    <div>標題：</div>
-    <input type="text" name="Tile" style="width: 40%;">
-    <div>介紹：</div>
-    <input type="text" name="Introduce" style="width: 40%;height: 200px;">
-    <div>欲售價格：</div>
-    <input type="number" name="Sell_Price"> </br>
-    <input type="button" onClick="check()" value="上傳" style="margin-left: 37%;">
-</form>
+<div>須審核列表</div>
+<?php
+$Search_Data = "SELECT * FROM `check_sell_item`";
+$result = $link->query($Search_Data);
+if ($result->num_rows > 0) { //判斷是否超過1條數據
+        while ($row = $result->fetch_assoc()) // 輸出數據
+        {
+            echo $row['email']."<br>";
+            echo $row['title']."<br>";
+            echo $row['description']."<br>";
+            ?>
+            <img src="<?php echo $row['file_path']; ?>"  height="100" width="100">
+<?php
+
+            echo $row['price']."<br>";
+        }
+}
+else{
+    echo "沒有需要審核的影片"."<br>";
+}
+?>
 </body>
 </html>
