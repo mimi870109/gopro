@@ -11,8 +11,8 @@ $fileCount = count($_FILES['my_file']['name']);
 
 if($Username == null){
     echo "請先進行登陸". '<br>';
-    echo "即將跳轉至登陸頁面". '<br>';
-    echo'<meta http-equiv="refresh" content="1.5;url=http://210.70.80.21/~s105035041/gopro/login/login.php" />';
+  //  echo "即將跳轉至登陸頁面". '<br>';
+  //  echo'<meta http-equiv="refresh" content="1.5;url=http://210.70.80.21/~s105035041/gopro/login/login.php" />';
 }
 else{
     for ($i = 0; $i < $fileCount; $i++) {

@@ -27,7 +27,10 @@
                 alert("未輸入價格");
             }
             <!-- 若以上條件皆不符合，也就是表單資料皆有填寫的話，則將資料送出 -->
-            else Up_Form.submit();
+            else {
+                Up_Form.submit();
+                document.getElementById("id_iframe").style.display = "block";
+            }
         }
     </script>
 </head>
@@ -66,7 +69,7 @@
         <li><a href="./login/login.php">登入</a></li>
     </ul>
 </nav>
-<form name="Up_Form" id="Upload_Form" method="post" enctype="multipart/form-data" action="function/upload.php" style="padding: 10px;">
+<form name="Up_Form" id="Upload_Form" method="post" enctype="multipart/form-data" action="function/upload.php" target="id_iframe" style="padding: 10px;">
     <?php if($Username == null){ echo '<div style="color: red;">請先進行登陸</div>';} ?>
     <input type="file" name="my_file[]" multiple>
     <div>標題：</div>
@@ -77,5 +80,6 @@
     <input type="number" name="Sell_Price"> </br>
     <input type="button" onClick="check()" value="上傳" style="margin-left: 37%;">
 </form>
+<iframe id="id_iframe" name="id_iframe" style="display:none;"></iframe>
 </body>
 </html>
