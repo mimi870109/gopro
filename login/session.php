@@ -10,13 +10,14 @@ $rowNum = mysqli_num_rows($result);
 $row=mysqli_fetch_row($result);
 
 if(!empty($email) && !empty($passwd) && $row[0]==$email && $row[1]=($passwd)){
-    $_SESSION['username']=$email;
- //   echo "登入成功";
+    $_SESSION['username'] = $email;
+    include ('../function/save_session.php');
+    //   echo "登入成功";
    echo'<meta http-equiv="refresh" content="2.5;url=../buy_item.php" />';
-}else{
+}
+else{
   //  echo "登入失敗";
-  //  echo'<meta http-equiv="refresh" content="1;url=http://210.70.80.21/~s105035041/gopro/login/login.php" />';
-
+   echo'<meta http-equiv="refresh" content="1;url=http://210.70.80.21/~s105035041/gopro/login/login.php" />';
 }
 /**
  * Created by PhpStorm.

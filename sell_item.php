@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <title>販賣影片</title>
     <?php
-    include ('./login/session.php');
-    $Username = $_SESSION['username'];
+    include ('./function/save_session.php');
     ?>
     <style>
         #Upload_Form > *{
