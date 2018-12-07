@@ -1,6 +1,6 @@
 <?php
 include ('../login/Mysql_check.php');
-include ('../login/session.php');
+include ('./save_session.php');
 $Tile = $_POST['Tile'];
 $Introduce = $_POST['Introduce'];
 $Sell_Price = $_POST['Sell_Price'];
