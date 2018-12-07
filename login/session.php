@@ -17,7 +17,7 @@ if(!empty($email) && !empty($passwd) && $row[0]==$email && $row[1]=($passwd)){
 }
 else{
   //  echo "登入失敗";
-   echo'<meta http-equiv="refresh" content="1;url=http://210.70.80.21/~s105035041/gopro/login/login.php" />';
+   echo'<meta http-equiv="refresh" content="1;url=./login.php" />';
 }
 /**
  * Created by PhpStorm.
