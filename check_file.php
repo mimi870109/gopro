@@ -46,6 +46,12 @@
 			max-width: 274px;
 			max-height: 180px;
 		}
+		.Order_Number_Box{
+			float: right;
+			position: relative;
+			font-size: 20px;
+			margin: 10px 45px;
+		}
     </style>
     <link rel="stylesheet" href="css/home_page.css">
 	<link rel="stylesheet" href="css/bootstrap-3.3.7.css">
@@ -113,6 +119,7 @@ if ($result->num_rows > 0) { //判斷是否超過1條數據
 							<input type="text" class="form-control" placeholder="placeholder content" value="<?php echo $row['price']; ?>">
 						</div>
 					</div>
+					<div class="Order_Number_Box"><span class="label label-primary">訂單編號 : <?php echo $row['id']; ?></span></div>
 					<div class="Check_Bt_Group">
 						<div class="Bt_Box">
 							<button type="button" class="btn btn-default">確認</button>
