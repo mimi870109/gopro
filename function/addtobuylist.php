@@ -19,6 +19,8 @@ $Insert_Sql_Info = "INSERT INTO `pass_item`(`email`, `title`, `description`, `fi
 if (mysqli_query($link, $Insert_Sql_Info) and mysqli_query($link, $delete_Sql_Info)) {
     echo "插入資料成功". "<br>";
     echo "刪除資料成功". "<br>";
+    echo "即將刷新頁面". "<br>";
+    echo'<meta http-equiv="refresh" content="0.5;url=../check_file.php" />';
 }
 else {
     echo "Error: " . $Insert_Sql_Info . "<br>" . mysqli_error($link);
