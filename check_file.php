@@ -91,7 +91,7 @@
         <li><a href="./login/login.php">登入</a></li>
     </ul>
 </nav>
-<div style="margin: 30px 53% 10px 47%; color: white; width: 100%; height: 30px; align-content: center"; ><h3>須審核列表</h3></div>
+<div style="margin: 30px 53% 10px 47%; color: white; width: 100%; height: 30px; align-content: center"; ><h3>需審核列表</h3></div>
 <?php
 $Search_Data = "SELECT * FROM `check_sell_item`";
 $result = $link->query($Search_Data);
@@ -122,8 +122,20 @@ if ($result->num_rows > 0) { //判斷是否超過1條數據
 					<div class="Order_Number_Box"><span class="label label-primary">訂單編號 : <?php echo $row['id']; ?></span></div>
 					<div class="Check_Bt_Group">
 						<div class="Bt_Box">
-							<button type="button" class="btn btn-default">確認</button>
-							<button type="button" class="btn btn-default">拒絕</button>
+                            <form action="function/addtobuylist.php" method="post">
+                                <input name="Oder_ID" style="display: none;" value="<?php echo $row['id']; ?>">
+                                <input name="File_Path" style="display: none;" value="<?php echo $row['file_path']; ?>">
+                                <input name="Username" style="display: none;" value="<?php echo $row['email']; ?>">
+                                <input name="Tile" style="display: none;" value="<?php echo $row['title']; ?>">
+                                <input name="Introduce" style="display: none;" value="<?php echo $row['description']; ?>">
+                                <input name="Sell_Price" style="display: none;" value="<?php echo $row['price']; ?>">
+							    <button type="submit" class="btn btn-default">確認</button>
+                            </form>
+                            <form action="function/delete_sql.php" method="post">
+                                <input name="Oder_ID" style="display: none;" value="<?php echo $row['id']; ?>">
+                                <input name="File_Path" style="display: none;" value="<?php echo $row['file_path']; ?>">
+							    <button type="submit" class="btn btn-default">拒絕</button>
+                            </form>
 						</div>
 					</div>
 				</div>
