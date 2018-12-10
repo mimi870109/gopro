@@ -12,6 +12,16 @@
         }
     </style>
     <link rel="stylesheet" href="css/home_page.css">
+	<link rel="stylesheet" href="css/bootstrap-3.3.7.css">
+    <link href="./css/file-input/css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="./css/file-input/themes/explorer-fas/theme.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="./css/file-input/js/bootstrap.bundle.js"></script>
+    <script src="./css/file-input/js/plugins/sortable.js" type="text/javascript"></script>
+    <script src="./css/file-input/js/fileinput.js" type="text/javascript"></script>
+	<script src="./css/file-input/js/locales/zh-TW.js" type="text/javascript"></script>
+    <script src="./css/file-input/themes/fas/theme.js" type="text/javascript"></script>
+    <script src="./css/file-input/themes/explorer-fas/theme.js" type="text/javascript"></script>
     <script>
         function check()
         {
@@ -68,17 +78,41 @@
         <li><a href="./login/login.php">登入</a></li>
     </ul>
 </nav>
-<form name="Up_Form" id="Upload_Form" method="post" enctype="multipart/form-data" action="function/upload.php" target="id_iframe" style="padding: 10px;">
-    <?php if($Username == null){ echo '<div style="color: red;">請先進行登陸</div>';} ?>
-    <input type="file" name="my_file[]" multiple>
-    <div>標題：</div>
-    <input type="text" name="Tile" style="width: 40%;">
-    <div>介紹：</div>
-    <input type="text" name="Introduce" style="width: 40%;height: 200px;">
-    <div>欲售價格：</div>
-    <input type="number" name="Sell_Price"> </br>
-    <input type="button" onClick="check()" value="上傳" style="margin-left: 37%;">
-</form>
+
+	
+<div class="container my-4">
+<hr>
+    <form name="Up_Form" id="Upload_Form" method="post" enctype="multipart/form-data" action="function/upload.php" target="id_iframe">
+		<?php if($Username == null){ echo '<div style="color: red;">請先進行登陸</div>';} ?>
+		<div class="form-group">
+			<h3><label for="exampleInputEmail1">標題</label></h3>
+			<input type="email" name="Tile" class="form-control" aria-describedby="emailHelp" placeholder="輸入您的標題名稱">
+		</div>
+		<div class="form-group">
+			<h3><label for="exampleInputEmail1">介紹</label></h3>
+			<textarea class="form-control" name="Introduce" id="Textarea" rows="10" placeholder="請介紹您的作品"></textarea>
+		</div>
+		<div class="form-group">
+			<h3><label for="exampleInputEmail1">價格</label></h3>
+			<input type="email" class="form-control" name="Sell_Price" aria-describedby="emailHelp" placeholder="輸入您的欲售價格">
+		</div>
+        <div class="file-loading">
+          <input id="input_file" name="my_file[]" class="file" type="file" multiple data-browse-on-zone-click="true">
+        </div>
+        <br>
+        <button type="button" onClick="check()" class="btn btn-primary">上傳</button>
+        <button type="reset" class="btn btn-outline-secondary">清除</button>
+    </form>
+    <hr>
+</div>
 <iframe id="id_iframe" name="id_iframe" style="display:none;"></iframe>
 </body>
+<script>
+$("#input_file").fileinput({
+    language: "zh-TW",
+	showPreview:true, 
+	showUpload: false,
+	validateInitialCount: true
+});
+</script>
 </html>
