@@ -39,6 +39,7 @@
             else {
                 Up_Form.submit();
                 document.getElementById("id_iframe").style.display = "block";
+                document.getElementById("iframe_box").style.display = "block";
             }
         }
     </script>
@@ -83,17 +84,17 @@
 <div class="container my-4">
 <hr>
     <form name="Up_Form" id="Upload_Form" method="post" enctype="multipart/form-data" action="function/upload.php" target="id_iframe">
-		<?php if($Username == null){ echo '<div style="color: red;">請先進行登陸</div>';} ?>
+		<?php if($Username == null){ echo '<div style="color: red; text-align: center;"><h3>請先進行登陸 / 註冊</h3></div>';} ?>
 		<div class="form-group">
-			<h3><label for="exampleInputEmail1">標題</label></h3>
+			<h3><label for="exampleInputEmail1">標題  (Title)</label></h3>
 			<input type="email" name="Tile" class="form-control" aria-describedby="emailHelp" placeholder="輸入您的標題名稱">
 		</div>
 		<div class="form-group">
-			<h3><label for="exampleInputEmail1">介紹</label></h3>
+			<h3><label for="exampleInputEmail1">介紹  (Introduction)</label></h3>
 			<textarea class="form-control" name="Introduce" id="Textarea" rows="10" placeholder="請介紹您的作品"></textarea>
 		</div>
 		<div class="form-group">
-			<h3><label for="exampleInputEmail1">價格</label></h3>
+			<h3><label for="exampleInputEmail1">價格  (Price)</label></h3>
 			<input type="email" class="form-control" name="Sell_Price" aria-describedby="emailHelp" placeholder="輸入您的欲售價格">
 		</div>
         <div class="file-loading">
@@ -104,8 +105,10 @@
         <button type="reset" class="btn btn-outline-secondary">清除</button>
     </form>
     <hr>
+    <div id="iframe_box" class="embed-responsive embed-responsive-1by1" style="display:none;">
+        <iframe id="id_iframe" name="id_iframe"  class="embed-responsive-item" style="display:none; margin-bottom: 10px;"></iframe>
+    </div>
 </div>
-<iframe id="id_iframe" name="id_iframe" style="display:none;"></iframe>
 </body>
 <script>
 $("#input_file").fileinput({

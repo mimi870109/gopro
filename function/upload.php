@@ -35,6 +35,7 @@ else{
             echo  '<script> alert("檔案上傳成功"); </script>';
         }
         else {
+            echo  '<script> alert("檔案上傳失敗"); </script>';
             echo '錯誤代碼：' . $_FILES['my_file']['error'] . '<br>';
         }
     }
