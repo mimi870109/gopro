@@ -15,17 +15,7 @@ body{ background: #808c92}
     margin: 0px auto;
 }
 
-.aaa {
-    background-image: url("./photo/G0010835.JPG");
-    width: 4000px;
-    height: 3000px;
-    position:absolute;
-    background-size: contain;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    animation-duration: 3ms;
 
-    }
 div.eg-CSS3-transitions,
 div.eg-normal {
     width: 250px;
