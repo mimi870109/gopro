@@ -13,15 +13,17 @@
     </style>
     <link rel="stylesheet" href="css/home_page.css">
 	<link rel="stylesheet" href="css/bootstrap-3.3.7.css">
+    <link rel="stylesheet" href="css/file-input/themes/explorer-fas/theme.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
     <link href="./css/file-input/css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
-    <link href="./css/file-input/themes/explorer-fas/theme.css" media="all" rel="stylesheet" type="text/css"/>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
     <script src="./css/file-input/js/bootstrap.bundle.js"></script>
     <script src="./css/file-input/js/plugins/sortable.js" type="text/javascript"></script>
     <script src="./css/file-input/js/fileinput.js" type="text/javascript"></script>
 	<script src="./css/file-input/js/locales/zh-TW.js" type="text/javascript"></script>
-    <script src="./css/file-input/themes/fas/theme.js" type="text/javascript"></script>
-    <script src="./css/file-input/themes/explorer-fas/theme.js" type="text/javascript"></script>
+    <script src="./css/file-input/themes/fas/theme.js" type="text/javascript" ></script>
+    <script src="./css/file-input/themes/explorer-fas/theme.js" type="text/javascript" ></script>
+
     <script>
         function check()
         {
@@ -38,8 +40,6 @@
             <!-- 若以上條件皆不符合，也就是表單資料皆有填寫的話，則將資料送出 -->
             else {
                 Up_Form.submit();
-                document.getElementById("id_iframe").style.display = "block";
-                document.getElementById("iframe_box").style.display = "block";
             }
         }
     </script>
@@ -83,39 +83,43 @@
 	
 <div class="container my-4">
 <hr>
-    <form name="Up_Form" id="Upload_Form" method="post" enctype="multipart/form-data" action="function/upload.php" target="id_iframe">
+    <form name="Up_Form" id="Upload_Form">
 		<?php if($Username == null){ echo '<div style="color: red; text-align: center;"><h3>請先進行登陸 / 註冊</h3></div>';} ?>
 		<div class="form-group">
 			<h3><label for="exampleInputEmail1">標題  (Title)</label></h3>
-			<input type="email" name="Tile" class="form-control" aria-describedby="emailHelp" placeholder="輸入您的標題名稱">
+			<input id="titiLe" type="email" name="Tile" class="form-control" aria-describedby="emailHelp" placeholder="輸入您的標題名稱">
 		</div>
 		<div class="form-group">
 			<h3><label for="exampleInputEmail1">介紹  (Introduction)</label></h3>
-			<textarea class="form-control" name="Introduce" id="Textarea" rows="10" placeholder="請介紹您的作品"></textarea>
+			<textarea id="Textarea" class="form-control" name="Introduce" rows="10" placeholder="請介紹您的作品"></textarea>
 		</div>
 		<div class="form-group">
 			<h3><label for="exampleInputEmail1">價格  (Price)</label></h3>
-			<input type="email" class="form-control" name="Sell_Price" aria-describedby="emailHelp" placeholder="輸入您的欲售價格">
+			<input id="Price" type="email" class="form-control" name="Sell_Price" aria-describedby="emailHelp" placeholder="輸入您的欲售價格">
 		</div>
+        <h3><label for="exampleInputEmail1">上傳檔案  (Upload File)</label></h3>
         <div class="file-loading">
-          <input id="input_file" name="my_file[]" class="file" type="file" multiple data-browse-on-zone-click="true">
+          <input id="input_file" name="my_file[]" class="file" type="file" multiple data-browse-on-zone-click="true" data-theme="fas">
         </div>
-        <br>
-        <button type="button" onClick="check()" class="btn btn-primary">上傳</button>
-        <button type="reset" class="btn btn-outline-secondary">清除</button>
     </form>
     <hr>
-    <div id="iframe_box" class="embed-responsive embed-responsive-1by1" style="display:none;">
-        <iframe id="id_iframe" name="id_iframe"  class="embed-responsive-item" style="display:none; margin-bottom: 10px;"></iframe>
-    </div>
 </div>
 </body>
 <script>
-$("#input_file").fileinput({
-    language: "zh-TW",
-	showPreview:true, 
-	showUpload: false,
-	validateInitialCount: true
-});
+    $("#input_file").fileinput({
+        theme: 'fas',
+        language: 'zh-TW',  //語言設定
+        uploadUrl: './function/upload.php',  //上傳地址
+        enctype:'multipart/form-data',
+        overwriteInitial: false,
+        uploadExtraData:function(){  //向後台傳輸參數
+            var data={
+                Tile:$("#titiLe").val(),
+                Introduce:$("#Textarea").val(),
+                Sell_Price:$("#Price").val()
+            };
+            return data;
+        },
+    });
 </script>
 </html>
