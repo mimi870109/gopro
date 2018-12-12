@@ -89,15 +89,15 @@
 		<?php if($Username == null){ echo '<div style="color: red; text-align: center;"><h3>請先進行登陸 / 註冊</h3></div>';} ?>
 		<div class="form-group">
 			<h3><label for="exampleInputEmail1">標題  (Title)</label></h3>
-			<input id="titiLe" type="email" name="Tile" class="form-control" aria-describedby="emailHelp" placeholder="輸入您的標題名稱">
+			<input id="titiLe" type="email" class="form-control" aria-describedby="emailHelp" placeholder="輸入您的標題名稱">
 		</div>
 		<div class="form-group">
 			<h3><label for="exampleInputEmail1">介紹  (Introduction)</label></h3>
-			<textarea id="Textarea" class="form-control" name="Introduce" rows="10" placeholder="請介紹您的作品"></textarea>
+			<textarea id="Textarea" class="form-control" rows="10" placeholder="請介紹您的作品"></textarea>
 		</div>
 		<div class="form-group">
 			<h3><label for="exampleInputEmail1">價格  (Price)</label></h3>
-			<input id="Price" type="email" class="form-control" name="Sell_Price" aria-describedby="emailHelp" placeholder="輸入您的欲售價格">
+			<input id="Price" type="email" class="form-control" aria-describedby="emailHelp" placeholder="輸入您的欲售價格">
 		</div>
         <h3><label for="exampleInputEmail1">上傳檔案  (Upload File)</label></h3>
         <div class="file-loading">

@@ -80,17 +80,17 @@ if ($result->num_rows > 0) { //判斷是否超過1條數據
 				</div>
 				<div class="Buttob_box">
 					<form class="confirm_box">
-						<input id="ID" name="Oder_ID" style="display: none;" value="<?php echo $row['id']; ?>">
-						<input id="FILE_PATH" name="File_Path" style="display: none;" value="<?php echo $row['file_path']; ?>">
-						<input id="USERNAME" name="Username" style="display: none;" value="<?php echo $row['email']; ?>">
-						<input id="TITLE" name="Tile" style="display: none;" value="<?php echo $row['title']; ?>">
-						<input id="INTRODUCE" name="Introduce" style="display: none;" value="<?php echo $row['description']; ?>">
-						<input id="SELL_PRICE" name="Sell_Price" style="display: none;" value="<?php echo $row['price']; ?>">
+						<input id="ID" style="display: none;" value="<?php echo $row['id']; ?>">
+						<input id="FILE_PATH" style="display: none;" value="<?php echo $row['file_path']; ?>">
+						<input id="USERNAME" style="display: none;" value="<?php echo $row['email']; ?>">
+						<input id="TITLE" style="display: none;" value="<?php echo $row['title']; ?>">
+						<input id="INTRODUCE" style="display: none;" value="<?php echo $row['description']; ?>">
+						<input id="SELL_PRICE" style="display: none;" value="<?php echo $row['price']; ?>">
 						<button type="submit" class="btn btn-default check_bt">確認</button>
 				  </form>
 					<form class="cancel_box">
-						<input id="DELET_ID" name="Oder_ID" style="display: none;" value="<?php echo $row['id']; ?>">
-						<input id="DELET_FILE_PATH" name="File_Path" style="display: none;" value="<?php echo $row['file_path']; ?>">
+						<input id="DELET_ID" style="display: none;" value="<?php echo $row['id']; ?>">
+						<input id="DELET_FILE_PATH" style="display: none;" value="<?php echo $row['file_path']; ?>">
 						<button type="submit" class="btn btn-default check_bt">拒絕</button>
 					</form>
 			  </div>
