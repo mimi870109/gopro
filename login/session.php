@@ -13,7 +13,7 @@ if(!empty($email) && !empty($passwd) && $row[0]==$email && $row[1]=($passwd)){
     $_SESSION['username'] = $email;
     include ('../function/save_session.php');
     //   echo "登入成功";
-   echo'<meta http-equiv="refresh" content="2.5;url=../buy_item.php" />';
+   echo'<meta http-equiv="refresh" content="0.5;url=../buy_item.php" />';
 }
 else{
   //  echo "登入失敗";
