@@ -48,7 +48,7 @@
     </ul>
 </nav>
 <div class="Check_title_box"><h3>需審核列表</h3></div>
-<div id="Big_Box">
+<div id="Big_Box" href="#">
 <?php
 $Search_Data = "SELECT * FROM `check_sell_item`";
 $result = $link->query($Search_Data);
@@ -106,6 +106,7 @@ else{
 ?>
 </div>
 </body>
+<!------確認按鈕ajax----->
 <script>
     $(".confirm_box").click(function(){
         var url = "function/addtobuylist.php";
@@ -124,9 +125,7 @@ else{
             },
             timeout:1000,
             success:function(){
-                location.reload(true);
-                //alert(dates);
-                //$("#Big_Box").html(dates);//要刷新的div
+                $("#Big_Box").html(div).fadeIn().delay(2000);//要刷新的div
             },
             error: function() {
                 alert("失敗，請稍候再試！");
@@ -135,7 +134,7 @@ else{
     });
 
 
-
+    <!------拒絕按鈕ajax----->
     $(".cancel_box").click(function(){
         var url = "function/delete_sql.php";
         $.ajax({
@@ -149,9 +148,7 @@ else{
             },
             timeout:1000,
             success:function(){
-                location.reload(true);
-                //alert(dates);
-                //$("#Big_Box").html(dates);//要刷新的div
+                $("#Big_Box").html(div).fadeIn().delay(2000);//要刷新的div
             },
             error: function() {
                  alert("失敗，請稍候再試！");
