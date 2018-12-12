@@ -18,7 +18,7 @@
 </div>
 <nav class="Nav_Bar">
     <ul class="drop-down-menu" >
-        <li><a href="game.html">關於我們</a>
+        <li><a href="game.php">關於我們</a>
             <ul>
                 <li><a href="creation.php">創作動機</a></li>
                 <li><a href="equipment.php">拍攝器材</a></li>
