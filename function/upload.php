@@ -12,8 +12,8 @@ $fileCount = count($_FILES['my_file']['name']);
 
 $success = null;
 if($Username == null){
+    $success = false;
     $output = ['error'=>'請先登陸'];
-   // echo "請先進行登陸". '<br>';
 }
 else{
     for ($i = 0; $i < $fileCount; $i++) {
@@ -23,7 +23,8 @@ else{
             $MD5_FILE_nAME =  md5(uniqid()) . "." . array_pop($ext);
             if (file_exists('../upload/' . $MD5_FILE_nAME))  # 檢查檔案是否已經存在
             {
-                $success = true;
+                $success = false;
+                $output = ['error'=>'上傳失敗']; // 失敗的處理
              //   echo '檔案已存在。<br/>';
             }
             else {
@@ -31,20 +32,20 @@ else{
                 $dest = '../upload/' . $MD5_FILE_nAME;
                 $File_Path = './upload/' . $MD5_FILE_nAME;
                 move_uploaded_file($file, $dest); # 將檔案移至指定位置
+                $Insert_Sql_Info = "INSERT INTO `check_sell_item`(`email`,`title`, `description`, `file_path`, `price`) VALUES ('$Username','$Tile','$Introduce','$File_Path','$Sell_Price')";
+                if (mysqli_query($link, $Insert_Sql_Info)) {
+                    $success = true;
+                    $output = ['success'=>'上傳成功']; // 成功的處理
+                }
+                else {
+                    $success = false;
+                    $output = ['error'=>'連接資料庫失敗']; // 失敗的處理
+                }
             }
-            $success = true;
-          //  echo  '<script> alert("檔案上傳成功"); </script>';
         }
         else {
             $success = false;
         }
-    }
-    $Insert_Sql_Info = "INSERT INTO `check_sell_item`(`email`,`title`, `description`, `file_path`, `price`) VALUES ('$Username','$Tile','$Introduce','$File_Path','$Sell_Price')";
-    if (mysqli_query($link, $Insert_Sql_Info)) {
-        $output = ['success'=>'上傳成功']; // 成功的處理
-    }
-    else {
-        $output = ['error'=>'上傳失敗']; // 失敗的處理
     }
 }
 echo json_encode($output); // 返回json
