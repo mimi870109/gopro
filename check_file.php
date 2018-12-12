@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/home_page.css">
 	<link rel="stylesheet" href="css/bootstrap-3.3.7.css" type="text/css">
     <link rel="stylesheet" href="css/check_file.css" type="text/css">
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
 <body style="background-color: #808c92; ">
 <div class="header">
@@ -47,6 +48,7 @@
     </ul>
 </nav>
 <div class="Check_title_box"><h3>需審核列表</h3></div>
+<div id="Big_Box">
 <?php
 $Search_Data = "SELECT * FROM `check_sell_item`";
 $result = $link->query($Search_Data);
@@ -77,18 +79,18 @@ if ($result->num_rows > 0) { //判斷是否超過1條數據
 				<span class="label label-primary">訂單編號：<?php echo $row['id']; ?></span> 
 				</div>
 				<div class="Buttob_box">
-					<form class="confirm_box" action="function/addtobuylist.php" method="post">
-						<input name="Oder_ID" style="display: none;" value="<?php echo $row['id']; ?>">
-						<input name="File_Path" style="display: none;" value="<?php echo $row['file_path']; ?>">
-						<input name="Username" style="display: none;" value="<?php echo $row['email']; ?>">
-						<input name="Tile" style="display: none;" value="<?php echo $row['title']; ?>">
-						<input name="Introduce" style="display: none;" value="<?php echo $row['description']; ?>">
-						<input name="Sell_Price" style="display: none;" value="<?php echo $row['price']; ?>">						
+					<form class="confirm_box">
+						<input id="ID" name="Oder_ID" style="display: none;" value="<?php echo $row['id']; ?>">
+						<input id="FILE_PATH" name="File_Path" style="display: none;" value="<?php echo $row['file_path']; ?>">
+						<input id="USERNAME" name="Username" style="display: none;" value="<?php echo $row['email']; ?>">
+						<input id="TITLE" name="Tile" style="display: none;" value="<?php echo $row['title']; ?>">
+						<input id="INTRODUCE" name="Introduce" style="display: none;" value="<?php echo $row['description']; ?>">
+						<input id="SELL_PRICE" name="Sell_Price" style="display: none;" value="<?php echo $row['price']; ?>">
 						<button type="submit" class="btn btn-default check_bt">確認</button>
 				  </form>
-					<form class="cancel_box" action="function/delete_sql.php" method="post">
-						<input name="Oder_ID" style="display: none;" value="<?php echo $row['id']; ?>">
-						<input name="File_Path" style="display: none;" value="<?php echo $row['file_path']; ?>">
+					<form class="cancel_box">
+						<input id="DELET_ID" name="Oder_ID" style="display: none;" value="<?php echo $row['id']; ?>">
+						<input id="DELET_FILE_PATH" name="File_Path" style="display: none;" value="<?php echo $row['file_path']; ?>">
 						<button type="submit" class="btn btn-default check_bt">拒絕</button>
 					</form>
 			  </div>
@@ -102,5 +104,59 @@ else{
     echo "<div style=\"margin: 30px 56% 10px 44%; color: white; width: 100%; height: 30px; align-content: center\"; ><h3>沒有需要審核的影片</h3></div>";
 }
 ?>
+</div>
 </body>
+<script>
+    $(".confirm_box").click(function(){
+        var url = "function/addtobuylist.php";
+        $.ajax({
+            type : "POST",
+            async : false,  //同步请求
+            dataType: "json",
+            url : url,
+            data : {
+                Oder_ID:$('#ID').val(),
+                File_Path:$('#FILE_PATH').val(),
+                Username:$('#USERNAME').val(),
+                Tile:$('#TITLE').val(),
+                Introduce:$('#INTRODUCE').val(),
+                Sell_Price:$('#SELL_PRICE').val()
+            },
+            timeout:1000,
+            success:function(){
+                location.reload(true);
+                //alert(dates);
+                //$("#Big_Box").html(dates);//要刷新的div
+            },
+            error: function() {
+                alert("失敗，請稍候再試！");
+            }
+        });
+    });
+
+
+
+    $(".cancel_box").click(function(){
+        var url = "function/delete_sql.php";
+        $.ajax({
+            type : "POST",
+            async : false,  //同步请求
+            dataType: "json",
+            url : url,
+            data : {
+                Oder_ID:$('#DELET_ID').val(),
+                File_Path:$('#DELET_FILE_PATH').val()
+            },
+            timeout:1000,
+            success:function(){
+                location.reload(true);
+                //alert(dates);
+                //$("#Big_Box").html(dates);//要刷新的div
+            },
+            error: function() {
+                 alert("失敗，請稍候再試！");
+            }
+        });
+    });
+</script>
 </html>
