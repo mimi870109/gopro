@@ -5,7 +5,7 @@
  * Date: 2018/12/8
  * Time: 上午 11:05
  */
-include ('../login/Mysql_check.php');
+include('./Mysql_check.php');
 $Oder_ID = $_POST['Oder_ID'];
 $File_Path = '.'.$_POST['File_Path'];
 $delete_Sql_Info = "DELETE FROM `check_sell_item` WHERE `id`='$Oder_ID'";

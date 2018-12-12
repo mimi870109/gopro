@@ -1,7 +1,7 @@
 <?php session_start();?>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
 <?php
-include ("Mysql_check.php");
+include('../function/Mysql_check.php');
 $name=$_POST['name'];
 $email=$_POST['email'];
 $type=$_POST['type'];

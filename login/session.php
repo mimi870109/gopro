@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
-include ('Mysql_check.php');
+include('../function/Mysql_check.php');
 $email=$_POST['email'];
 $passwd=sha1($_POST['passwd']);
 $sql="SELECT `email`,`passwd`FROM `user`WHERE `email`='$email'AND`passwd`='$passwd';";

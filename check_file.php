@@ -1,7 +1,7 @@
 <!doctype html>
 <head>
 <?php
-	include ('./login/Mysql_check.php');
+	include('./function/Mysql_check.php');
 ?>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">

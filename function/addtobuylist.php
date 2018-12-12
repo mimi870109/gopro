@@ -5,7 +5,7 @@
  * Date: 2018/12/8
  * Time: 上午 11:09
  */
-include ('../login/Mysql_check.php');
+include('./Mysql_check.php');
 $Oder_ID = $_POST['Oder_ID'];
 $Tile = $_POST['Tile'];
 $Introduce = $_POST['Introduce'];

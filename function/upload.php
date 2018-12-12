@@ -1,5 +1,5 @@
 <?php
-include ('../login/Mysql_check.php');
+include('./Mysql_check.php');
 include ('./save_session.php');
 $Tile = $_POST['Tile'];
 $Introduce = $_POST['Introduce'];
