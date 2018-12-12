@@ -12,32 +12,34 @@
         }
     </style>
     <link rel="stylesheet" href="css/home_page.css">
-	<link rel="stylesheet" href="css/bootstrap-3.3.7.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/bootstrap-3.3.7.css"> -->
     <link rel="stylesheet" href="css/file-input/themes/explorer-fas/theme.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
     <link href="./css/file-input/css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-    <script src="./css/file-input/js/bootstrap.bundle.js"></script>
-    <script src="./css/file-input/js/plugins/sortable.js" type="text/javascript"></script>
-    <script src="./css/file-input/js/fileinput.js" type="text/javascript"></script>
-	<script src="./css/file-input/js/locales/zh-TW.js" type="text/javascript"></script>
-    <script src="./css/file-input/themes/fas/theme.js" type="text/javascript" ></script>
-    <script src="./css/file-input/themes/explorer-fas/theme.js" type="text/javascript" ></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <!-- <script src="./css/file-input/js/bootstrap.bundle.js"></script> -->
+     <script src="./css/file-input/js/plugins/sortable.js" type="text/javascript"></script>
+     <script src="./css/file-input/js/fileinput.js" type="text/javascript"></script>
+     <script src="./css/file-input/js/locales/zh-TW.js" type="text/javascript"></script>
+     <script src="./css/file-input/themes/fas/theme.js" type="text/javascript" ></script>
+     <script src="./css/file-input/themes/explorer-fas/theme.js" type="text/javascript" ></script>
 
-    <script>
-        function check()
-        {
-            if(Up_Form.Tile.value == "")
-            {
-                alert("未輸入標題");
-            }
-            else if (Up_Form.Introduce == ""){
-                alert("未輸入介紹");
-            }
-            else if (Up_Form.Sell_Price == ""){
-                alert("未輸入價格");
-            }
-            <!-- 若以上條件皆不符合，也就是表單資料皆有填寫的話，則將資料送出 -->
+     <script>
+         function check()
+         {
+             if(Up_Form.Tile.value == "")
+             {
+                 alert("未輸入標題");
+             }
+             else if (Up_Form.Introduce == ""){
+                 alert("未輸入介紹");
+             }
+             else if (Up_Form.Sell_Price == ""){
+                 alert("未輸入價格");
+             }
+             <!-- 若以上條件皆不符合，也就是表單資料皆有填寫的話，則將資料送出 -->
             else {
                 Up_Form.submit();
             }
