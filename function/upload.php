@@ -6,10 +6,12 @@ $Introduce = $_POST['Introduce'];
 $Sell_Price = $_POST['Sell_Price'];
 $Username = $_SESSION['username'];
 $File_Path = '';
-
-# 取得上傳檔案數量
-$fileCount = count($_FILES['my_file']['name']);
-
+class Json_Output{
+    public $success = "";
+    public $error = "";
+}
+$Json_Output = new Json_Output();
+$fileCount = count($_FILES['my_file']['name']); # 取得上傳檔案數量
 $success = null;
 if($Username == null){
     $success = false;
@@ -24,8 +26,7 @@ else{
             if (file_exists('../upload/' . $MD5_FILE_nAME))  # 檢查檔案是否已經存在
             {
                 $success = false;
-                $output = ['error'=>'上傳失敗']; // 失敗的處理
-             //   echo '檔案已存在。<br/>';
+                $Json_Output ->error = "上傳失敗,檔案已存在";
             }
             else {
                 $file = $_FILES['my_file']['tmp_name'][$i];
@@ -35,11 +36,11 @@ else{
                 $Insert_Sql_Info = "INSERT INTO `check_sell_item`(`email`,`title`, `description`, `file_path`, `price`) VALUES ('$Username','$Tile','$Introduce','$File_Path','$Sell_Price')";
                 if (mysqli_query($link, $Insert_Sql_Info)) {
                     $success = true;
-                    $output = ['success'=>'上傳成功']; // 成功的處理
+                    $Json_Output ->success = "上傳成功";
                 }
                 else {
                     $success = false;
-                    $output = ['error'=>'連接資料庫失敗']; // 失敗的處理
+                    $Json_Output ->error = "連接資料庫失敗";
                 }
             }
         }
@@ -48,5 +49,5 @@ else{
         }
     }
 }
-echo json_encode($output); // 返回json
+echo json_encode($Json_Output); // 返回json
 ?>
