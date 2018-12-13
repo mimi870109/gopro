@@ -41,7 +41,7 @@
              }
              <!-- 若以上條件皆不符合，也就是表單資料皆有填寫的話，則將資料送出 -->
             else {
-                Up_Form.submit();
+              //  Up_Form.submit();
             }
         }
     </script>
@@ -121,7 +121,7 @@
                 Sell_Price:$("#Price").val()
             };
             return data;
-        },
+        }
     });
 </script>
 </html>
