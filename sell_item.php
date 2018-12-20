@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title>販賣影片</title>
     <?php
-    include ('./function/save_session.php');
+        include('./function/Mysql_check.php');
+        include ('./function/save_session.php');
     ?>
     <style>
         #Upload_Form > *{
@@ -78,6 +79,7 @@
             </ul>
         </li>
         <li><a href="sell_item.php">我要貢獻影片</a></li>
+        <?php include('function/admin_check.php'); ?>
         <li><a href="./login/login.php">登入</a></li>
     </ul>
 </nav>

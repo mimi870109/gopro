@@ -2,7 +2,19 @@
 <head>
 <?php
 	include('./function/Mysql_check.php');
+    include ('./function/save_session.php');
 ?>
+<?php
+$check_sql = "SELECT * FROM `permission_check` WHERE `email`='$Username' AND `permission`=1";
+$count = mysqli_query($link, $check_sql) -> num_rows;
+    if($count == 0){
+        echo "您沒有權限訪問該頁面";
+        echo "即將跳轉";
+        echo '<meta http-equiv="refresh" content="3;url=./buy_item.php"/>';
+    }
+    else{
+?>
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,6 +56,7 @@
             </ul>
         </li>
         <li><a href="sell_item.php">我要貢獻影片</a></li>
+        <?php include('function/admin_check.php'); ?>
         <li><a href="./login/login.php">登入</a></li>
     </ul>
 </nav>
@@ -156,4 +169,5 @@ else{
         });
     });
 </script>
+<?php } ?>
 </html>

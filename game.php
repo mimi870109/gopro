@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>GoPor影片集合地</title>
     <link rel="stylesheet" href="css/home_page.css">
+    <?php
+        include('./function/Mysql_check.php');
+        include ('./function/save_session.php');
+    ?>
 </head>
 <body>
 <div class="header">
@@ -37,6 +41,7 @@
 			</ul>
 		</li>
 		<li><a href="sell_item.php">我要貢獻影片</a></li>
+        <?php include('function/admin_check.php'); ?>
 		<li><a href="./login/login.php">登入</a></li>
 	</ul>
 </nav>
