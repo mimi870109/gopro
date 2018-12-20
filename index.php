@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" http-equiv="refresh" content="5; url=game.html">
+    <meta charset="UTF-8" http-equiv="refresh" content="5; url=game.php">
     <title>起始網頁</title>
 
 </head>
