@@ -81,7 +81,7 @@ if ($result->num_rows > 0) { //判斷是否超過1條數據
 				  <div class="input-group"><span class="input-group-addon">介紹</span>
 					<input type="text" class="form-control" placeholder="placeholder content" value="<?php echo $row['description']; ?>"></div>
 				  <div class="resourse">
-					  <img src="<?php echo $row['file_path']; ?>" class="img-responsive" alt="Placeholder image">
+					  <video src="<?php echo $row['file_path']; ?>" class="img-responsive" controls="controls" alt="Placeholder image"></video>
 				  </div>
 					  <div class="input-group"><span class="input-group-addon">價格 NTD$</span>
 					<input type="text" class="form-control" placeholder="placeholder content" value="<?php echo $row['price']; ?>"></div>

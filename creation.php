@@ -42,7 +42,8 @@
 		</li>
 		<li><a href="sell_item.php">我要貢獻影片</a></li>
         <?php include('function/admin_check.php'); ?>
-		<li><a href="./login/login.php">登入</a></li>
+        <?php include('login/login1.php'); ?>
+        <?php include('login/logout.php'); ?>
 	</ul>
 </nav>
 <hr>
